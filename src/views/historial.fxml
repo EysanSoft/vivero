@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="anchorPaneHistorial" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: purple;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.historialController">
+   <children>
+      <Button fx:id="botonRegresar" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#botonRegresarOMC" text="Regresar" />
+   </children>
+</AnchorPane>

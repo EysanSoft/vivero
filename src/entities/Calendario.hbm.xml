@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entities">
+    <class dynamic-insert="false"
+           dynamic-update="false" name="Calendario" table="calendario">
+
+        <id name="idCalendario"
+            column="idCalendario"
+            type="java.lang.Integer"
+            unsaved-value="null" >
+            <generator class="native">
+            </generator>
+        </id>
+        <!--one-to-one name="producto" class="Producto"/-->
+        <property name="lunes" column="lunes"/>
+        <property name="martes" column="martes"/>
+        <property name="miercoles" column="miercoles"/>
+        <property name="jueves" column="jueves"/>
+        <property name="viernes" column="viernes"/>
+        <property name="sabado" column="sabado"/>
+        <property name="domingo" column="domingo"/>
+
+        <many-to-one name="producto" class="Producto" fetch="select">
+            <column name="idProducto" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

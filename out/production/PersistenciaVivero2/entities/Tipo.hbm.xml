@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entities">
+    <class name="Tipo" table="tipo">
+
+        <id column="idTipo" name="idTipo" type="integer"/>
+        <property name="Tipo" column="tipo"/>
+        <bag name="producto" table="producto"
+             inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idTipo" not-null="true" />
+            </key>
+            <one-to-many class="Producto"  />
+        </bag>
+    </class>
+</hibernate-mapping>

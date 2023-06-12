@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entities">
+
+    <class dynamic-insert="false"
+           dynamic-update="false" name="Producto" table="producto">
+
+        <id name="idProducto"
+            column="idProducto"
+            type="java.lang.Integer"
+            unsaved-value="null" >
+            <generator class="native">
+            </generator>
+        </id>
+        <property name="nombre" column="nombre"/>
+        <property name="ingreso" column="ingreso"></property>
+        <property name="estado" column="estado"></property>
+        <bag name="listaRiego" table="riego"
+             inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idProducto" not-null="true" />
+            </key>
+            <one-to-many class="Riego"  />
+        </bag>
+        <bag name="listaFotos" table="fotos"
+             inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idProducto" not-null="true" />
+            </key>
+            <one-to-many class="Fotos"  />
+        </bag>
+
+        <one-to-one name="calendario" class="Calendario" cascade="delete"/>
+
+        <many-to-one name="tipo" class="Tipo" fetch="select">
+            <column name="idTipo" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

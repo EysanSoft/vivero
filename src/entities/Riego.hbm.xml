@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entities">
+    <class name="Riego" table="riego">
+
+        <id name="idRiego"
+            column="idRiego"
+            type="java.lang.Integer"
+            unsaved-value="null" >
+            <generator class="native">
+            </generator>
+        </id>
+        <property name="fecha" column="fecha"/>
+        <property name="riego" column="riego"/>
+        <many-to-one name="producto" class="Producto" fetch="select">
+            <column name="idProducto" not-null="true" />
+        </many-to-one>
+    </class>
+
+</hibernate-mapping>

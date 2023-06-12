@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.agregarProductosController">
+   <children>
+      <Label layoutX="188.0" layoutY="14.0" text="Agregar un Nuevo Producto" textFill="#eaff00">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button fx:id="botonRegresar" layoutX="468.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#botonRegresarOMC" prefWidth="100.0" text="Regresar" />
+      <Label layoutX="18.0" layoutY="61.0" text="Ingrese en todos los campos los datos del nuevo producto y selecione en la tabla que tipo de producto es." textFill="WHITE" />
+      <TextField fx:id="textFieldNombreProducto" layoutX="31.0" layoutY="113.0" prefHeight="26.0" prefWidth="250.0" promptText="Nombre" />
+      <TextField fx:id="textFieldEstado" layoutX="30.0" layoutY="193.0" prefHeight="26.0" prefWidth="150.0" promptText="Estado Actual" />
+      <TableView fx:id="tablaTipo" layoutX="338.0" layoutY="106.0" prefHeight="200.0" prefWidth="230.0">
+        <columns>
+          <TableColumn fx:id="columnID" text="ID" />
+          <TableColumn fx:id="columnTipo" prefWidth="149.60001220703126" text="Tipo" />
+        </columns>
+      </TableView>
+      <Button fx:id="botonAgregar" layoutX="31.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#botonAgregarOMC" prefWidth="100.0" text="Agregar" />
+      <DatePicker fx:id="datePickerIngreso" layoutX="30.0" layoutY="279.0" prefHeight="26.0" prefWidth="150.0" promptText="Fecha de Ingreso" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.eliminarCalendarioController">
+   <children>
+      <TableView fx:id="tablaCalendario" layoutX="60.0" layoutY="123.0" prefHeight="200.0" prefWidth="480.0">
+         <columns>
+            <TableColumn fx:id="IDColumn" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="productoColumn" prefWidth="100.0" text="Producto" />
+            <TableColumn fx:id="lunesColumn" prefWidth="50.0" text="Lun" />
+            <TableColumn fx:id="martesColumn" prefWidth="50.0" text="Mar" />
+            <TableColumn fx:id="miercolesColumn" prefWidth="50.0" text="Mie" />
+            <TableColumn fx:id="juevesColumn" prefWidth="50.0" text="Jue" />
+            <TableColumn fx:id="viernesColumn" prefWidth="50.0" text="Vie" />
+            <TableColumn fx:id="sabadoColumn" prefWidth="50.0" text="Sab" />
+            <TableColumn fx:id="domingoColumn" minWidth="0.0" prefWidth="50.0" text="Dom" />
+         </columns>
+      </TableView>
+      <Button fx:id="botonRegresar" layoutX="509.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#botonRegresarOMC" text="Regresar" />
+      <Label layoutX="173.0" layoutY="26.0" text="Eliminar un Calendario de Riego">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldID" layoutX="116.0" layoutY="69.0" prefHeight="26.0" prefWidth="300.0" promptText="Ingrese la ID de Calendario" />
+      <Button fx:id="botonEliminar" layoutX="416.0" layoutY="69.0" mnemonicParsing="false" onMouseClicked="#botonEliminarOMC" style="-fx-background-color: Red;" text="Eliminar" textFill="WHITE" />
+   </children>
+</AnchorPane>

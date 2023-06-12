@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.tipoController">
+   <children>
+      <TableView fx:id="tablaTipo" layoutX="30.0" layoutY="97.0" prefHeight="230.0" prefWidth="230.0">
+         <columns>
+            <TableColumn fx:id="columnID" text="ID" />
+            <TableColumn fx:id="columnTipo" prefWidth="149.60001220703126" text="Tipo" />
+         </columns>
+      </TableView>
+      <Label layoutX="246.0" layoutY="25.0" text="Vivero - Tipo ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldAgregar" layoutX="321.0" layoutY="125.0" prefHeight="26.0" prefWidth="170.0" promptText="Nombre" />
+      <Button fx:id="botonAgregar" layoutX="491.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#botonAgregarOMC" prefHeight="26.0" prefWidth="80.0" text="Agregar" />
+      <TextField fx:id="textFieldActualizar" layoutX="291.0" layoutY="212.0" prefHeight="26.0" prefWidth="200.0" promptText="Ingrese el nombre a modificar" />
+      <Button fx:id="botonActualizar" layoutX="491.0" layoutY="212.0" mnemonicParsing="false" onMouseClicked="#botonActualizarOMC" prefHeight="26.0" prefWidth="80.0" text="Actualizar" />
+      <Button fx:id="botonEliminar" layoutX="491.0" layoutY="290.0" mnemonicParsing="false" onMouseClicked="#botonEliminarOMC" prefHeight="26.0" prefWidth="80.0" text="Eliminar" />
+      <Button fx:id="botonRegresar" layoutX="491.0" layoutY="359.0" mnemonicParsing="false" onMouseClicked="#botonRegresarOMC" prefHeight="26.0" prefWidth="80.0" text="Regresar" />
+      <Label layoutX="306.0" layoutY="294.0" text="Seleccione la tabla para eliminar" />
+      <Label layoutX="302.0" layoutY="182.0" text="Seleccione la tabla para actualizar" />
+      <TextField fx:id="textFieldIDTipo" layoutX="291.0" layoutY="125.0" prefHeight="26.0" prefWidth="30.0" promptText="ID" />
+   </children>
+</AnchorPane>

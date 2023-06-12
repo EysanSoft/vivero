@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: red;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.agregarCalendarioController">
+   <children>
+      <TableView fx:id="tablaProductos" layoutX="25.0" layoutY="64.0" prefHeight="200.0" prefWidth="550.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="40.0" text="ID" />
+            <TableColumn fx:id="nombreColumn" prefWidth="200.0" text="Nombre" />
+            <TableColumn fx:id="tipoColumn" prefWidth="100.0" text="Tipo" />
+            <TableColumn fx:id="fechaColumn" prefWidth="120.0" text="Fecha de Ingreso" />
+            <TableColumn fx:id="estadoColumn" prefWidth="89.60001220703123" text="Estado" />
+         </columns>
+      </TableView>
+      <Label layoutX="144.0" layoutY="22.0" text="Agregar un Nuevo Calendario de Riego" textFill="#eaff00">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="botonAgregar" layoutX="345.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#botonAgregarOMC" prefWidth="100.0" text="Agregar" />
+      <Button fx:id="botonRegresar" layoutX="475.0" layoutY="360.0" mnemonicParsing="false" onMouseClicked="#botonRegresarOMC" prefWidth="100.0" text="Regresar" />
+      <CheckBox fx:id="ckLunes" layoutX="25.0" layoutY="284.0" mnemonicParsing="false" onMouseClicked="#ckLunesOMC" text="Lunes" textFill="WHITE" />
+      <CheckBox fx:id="ckMiercoles" layoutX="25.0" layoutY="364.0" mnemonicParsing="false" onMouseClicked="#ckMiercolesOMC" text="Miercoles" textFill="WHITE" />
+      <CheckBox fx:id="ckViernes" layoutX="135.0" layoutY="324.0" mnemonicParsing="false" onMouseClicked="#ckViernes" text="Viernes" textFill="WHITE" />
+      <CheckBox fx:id="ckMartes" layoutX="25.0" layoutY="324.0" mnemonicParsing="false" onMouseClicked="#ckMartesOMC" text="Martes" textFill="WHITE" />
+      <CheckBox fx:id="ckJueves" layoutX="135.0" layoutY="284.0" mnemonicParsing="false" onMouseClicked="#ckJuevesOMC" text="Jueves" textFill="WHITE" />
+      <CheckBox fx:id="ckDomingo" layoutX="245.0" layoutY="364.0" mnemonicParsing="false" onMouseClicked="#ckDomingoOMC" text="Domingo" textFill="WHITE" />
+      <CheckBox fx:id="ckSabado" layoutX="135.0" layoutY="364.0" mnemonicParsing="false" onMouseClicked="#ckSabadoOMC" text="Sabado" textFill="WHITE" />
+      <Label layoutX="271.0" layoutY="315.0" text="Selecciona el producto a otorgarle un calendario de riego" textFill="WHITE" />
+   </children>
+</AnchorPane>
